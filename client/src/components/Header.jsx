@@ -12,8 +12,8 @@ const HeaderBox = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 
-    background-color:#181818;
     height: 85%;
     width: 95%;
 `;
@@ -23,25 +23,26 @@ const HeaderName = styled.div`
     justify-content: center;
 
     width:50%;
-    font-size: 120px;
+    font-size: 80px;
 
     color: #FFFFFF;
 `;
 
 const HeaderInfoBox = styled.div`
     display: flex;
-    flex-direction: column;
     align-items: flex-end;
 
     height: 100%;
     width: 50%;
 `;
 
-const HeaderInfo = styled.p`
+const HeaderInfo = styled.a`
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
+    align-items: center;
 
-    width: 80%;
+    width: 85%;
+    height: 100%;
     font-size: 20px;
     color: #B3B3B3;
 `;
@@ -61,10 +62,15 @@ const Header = () => {
                     <HeaderInfo>
                         Resume
                     </HeaderInfo>
+                    <HeaderInfo>
+                        LinkedIn
+                    </HeaderInfo>
+                    <HeaderInfo>
+                        Github
+                    </HeaderInfo>
                 </HeaderInfoBox>
             </HeaderBox>
         </HeaderSpace>
-        
     )
 }
 
