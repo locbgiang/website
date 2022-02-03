@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import sendeth from '../../images/sendeth.png';
+import React from 'react';
 
 const BodySpace = styled.div`
     height: 600px;
@@ -32,7 +33,6 @@ const ProjectName = styled.div`
 
     display:flex;
     justify-content: center;
-    margin-bottom: 10px;
 `;
 
 const ProjectImage = styled.img`
@@ -40,22 +40,32 @@ const ProjectImage = styled.img`
     border: 2px solid black;
 `;
 
+const ProjectSrc = styled.a`
+    color:white;
+`
+
 const ProjectDescription = styled.div`
     width: 90%;
-    height: 30%;
+    height: 35%;
     padding-top: 10px;
+    padding-left: 25px;
 
-    font-size: 20px;
+    font-size: 15px;
     color:white;
 `;
 
 const ProjectTechBox = styled.div`
-    height: 24%;
+    height: 10%;
     width: 90%;
     
     display:flex;
     align-content: flex-start;
     flex-wrap: wrap;
+`;
+
+const ProjectTechStack = styled.div`
+    color:white;
+    width: 90%;
 `;
 
 const ProjectTech = styled.div`
@@ -67,37 +77,46 @@ const ProjectTech = styled.div`
     border-radius: 15px;
     border: 1px solid black;
 
-    font-size: 20px;
+    font-size: 15px;
     color: black;
     font-weight: 900;
 
     background-color: #B3B3B3;
-    
 `;
 
-const Projects = () =>{
+const Projects = ({projectName, projectImage, projectSrc, projectDesc, projectTechFrontEnd, projectTechBackEnd}) =>{
+
     return (
         <ProjectBox>
             <ProjectName>
-                project 1
+                {projectName}
             </ProjectName>
-            <ProjectImage src={sendeth} />
+            <ProjectImage src={projectImage} />
+            <ProjectSrc href='https://github.com/locbgiang/sendEth'>
+                {projectSrc}
+            </ProjectSrc>
             <ProjectDescription>
-                Some description of the project here.
+                {projectDesc}
             </ProjectDescription>
+            <ProjectTechStack>
+                Front-End:
+            </ProjectTechStack>
             <ProjectTechBox>
-                <ProjectTech>
-                    React
-                </ProjectTech>
-                <ProjectTech>
-                    Javascript
-                </ProjectTech>
-                <ProjectTech>
-                    Tailwind
-                </ProjectTech>
-                <ProjectTech>
-                    Solidity
-                </ProjectTech>
+                {projectTechFrontEnd.map((item)=>(
+                    <ProjectTech>
+                        {item}
+                    </ProjectTech>
+                ))}
+            </ProjectTechBox>
+            <ProjectTechStack>
+                Back-End:
+            </ProjectTechStack>
+            <ProjectTechBox>
+                {projectTechBackEnd.map((item)=>(
+                    <ProjectTech>
+                        {item}
+                    </ProjectTech>
+                ))}
             </ProjectTechBox>
         </ProjectBox>
     )
@@ -106,7 +125,16 @@ const Projects = () =>{
 const Body = () => {
     return (
         <BodySpace>
-            <Projects></Projects>
+            <Projects 
+                projectName="Send-Eth"
+                projectImage={sendeth}
+                projectSrc="https://github.com/locbgiang/sendEth"
+                projectDesc="This website allows users to connect with their Metamask wallet, then transfer ETH through the Ethereum network.  
+                Users then can view their past transactions dynamically on the site.
+                Building this website helped me understand how blockchain techology can be implemented with a website."
+                projectTechFrontEnd={["React", "Tailwind","Javascript"]}
+                projectTechBackEnd={["Javascript", "Hardhat", "Solidity"]}
+            />
         </BodySpace>
     )
 }
