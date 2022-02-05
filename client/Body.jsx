@@ -3,42 +3,22 @@ import sendeth from '../../images/sendeth.png';
 import React from 'react';
 import { FaGithub } from 'react-icons/fa';
 
-
 const BodySpace = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-`;
-
-const ProjectSpaceName = styled.div`
-    height: 80px;
-    width: 80%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-
-    font-size: 50px;
-    color: white;
-`;
-
-const ProjectSpace = styled.div`
-    height: auto;
-    width: auto;
+    height: 700px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    flex-wrap: wrap;
 
     @media only screen and (max-width: 900px) {
         flex-direction: column;
         align-items: center;
+        height: 1200px;
     }
 `;
 
 const ProjectBox = styled.div`
-    height: 600px;
-    width: 300px;
-    margin: 30px 50px;
+    height: 90%;
+    width: 20%;
 
     display:flex;
     flex-direction: column;
@@ -56,13 +36,12 @@ const ProjectBox = styled.div`
         flex-direction: row;
         height: 20%;
         width: 90%;
-        margin: 20px 0;
     }
 `;
 
 const ProjectHeader = styled.div`
     height: 45%;
-    width: 100%;
+    width: 90%;
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -95,7 +74,7 @@ const ProjectImage = styled.img`
 `;
 
 const ProjectSrcBox = styled.div`
-    width: 50%;
+    width: 35%;
 
     display:flex;
     justify-content:space-evenly;
@@ -113,7 +92,7 @@ const ProjectSrc = styled.a`
 `
 
 const ProjectBody = styled.div`
-    height: 65%;
+    height: 70%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -125,7 +104,9 @@ const ProjectBody = styled.div`
 
 const ProjectDescription = styled.div`
     width: 90%;
-    height: 50%;
+    height: 60%;
+
+    padding-left: 25px;
 
     display: flex;
     justify-content: center;
@@ -143,8 +124,8 @@ const ProjectDescription = styled.div`
 
 const ProjectTechBox = styled.div`
     height: 15%;
-    width: 100%;
-
+    width: 90%;
+    
     display:flex;
     align-content: flex-start;
     flex-wrap: wrap;
@@ -158,7 +139,7 @@ const ProjectTechBox = styled.div`
 
 const ProjectTechStack = styled.div`
     color:white;
-    width: 95%;
+    width: 90%;
     @media only screen and (max-width: 900px) {
         display:flex;
         justify-content: center;
@@ -234,69 +215,47 @@ const Projects = ({projectSite, projectName, projectImage, projectSrc, projectDe
 const Body = () => {
     return (
         <BodySpace>
-            <ProjectSpaceName>
-                Web3 Projects
-            </ProjectSpaceName>
-            <ProjectSpace>
-                <Projects 
-                    projectSite="https://send-eth-website.vercel.app/"
-                    projectName="Send-Eth"
-                    projectImage={sendeth}
-                    projectSrc="https://github.com/locbgiang/sendEth"
-                    projectDesc="This app allows users to connect with their Metamask wallet, then transfer ETH through the Ethereum network.  
-                    Users then can view their past transactions dynamically on the site.
-                    Building this website helped me understand how blockchain techology can be implemented with a react application."
-                    projectTechFrontEnd={["React", "Tailwind","Javascript"]}
-                    projectTechBackEnd={["Javascript", "Hardhat", "Solidity"]}
-                />
-                <Projects 
-                    projectName="Send-Eth"
-                    projectImage={sendeth}
-                    projectSrc="https://github.com/locbgiang/sendEth"
-                    projectDesc="This website allows users to connect with their Metamask wallet, then transfer ETH through the Ethereum network.  
-                    Users then can view their past transactions dynamically on the site.
-                    Building this website helped me understand how blockchain techology can be implemented with a website."
-                    projectTechFrontEnd={["React", "Tailwind","Javascript"]}
-                    projectTechBackEnd={["Javascript", "Hardhat", "Solidity"]}
-                />
-                <Projects 
-                    projectName="Send-Eth"
-                    projectImage={sendeth}
-                    projectSrc="https://github.com/locbgiang/sendEth"
-                    projectDesc="This website allows users to connect with their Metamask wallet, then transfer ETH through the Ethereum network.  
-                    Users then can view their past transactions dynamically on the site.
-                    Building this website helped me understand how blockchain techology can be implemented with a website."
-                    projectTechFrontEnd={["React", "Tailwind","Javascript"]}
-                    projectTechBackEnd={["Javascript", "Hardhat", "Solidity"]}
-                />
-                <Projects 
-                    projectName="Send-Eth"
-                    projectImage={sendeth}
-                    projectSrc="https://github.com/locbgiang/sendEth"
-                    projectDesc="This website allows users to connect with their Metamask wallet, then transfer ETH through the Ethereum network.  
-                    Users then can view their past transactions dynamically on the site.
-                    Building this website helped me understand how blockchain techology can be implemented with a website."
-                    projectTechFrontEnd={["React", "Tailwind","Javascript"]}
-                    projectTechBackEnd={["Javascript", "Hardhat", "Solidity"]}
-                />
-                
-                
-            </ProjectSpace>
-            <ProjectSpaceName>
-                Web2 Projects
-            </ProjectSpaceName>
-            <ProjectSpace>
-                <Projects 
-                    projectName="Send-Eth"
-                    projectImage={sendeth}
-                    projectSrc="https://github.com/locbgiang/sendEth"
-                    projectDesc="This website allows users to connect with their Metamask wallet, then transfer ETH through the Ethereum network.  
-                    Users then can view their past transactions dynamically on the site.
-                    Building this website helped me understand how blockchain techology can be implemented with a website."
-                    projectTechFrontEnd={["React", "Tailwind","Javascript"]}
-                    projectTechBackEnd={["Javascript", "Hardhat", "Solidity"]}
-                />
-            </ProjectSpace>
+            <Projects 
+                projectSite="https://send-eth-website.vercel.app/"
+                projectName="Send-Eth"
+                projectImage={sendeth}
+                projectSrc="https://github.com/locbgiang/sendEth"
+                projectDesc="This website allows users to connect with their Metamask wallet, then transfer ETH through the Ethereum network.  
+                Users then can view their past transactions dynamically on the site.
+                Building this website helped me understand how blockchain techology can be implemented with a website."
+                projectTechFrontEnd={["React", "Tailwind","Javascript"]}
+                projectTechBackEnd={["Javascript", "Hardhat", "Solidity"]}
+            />
+            <Projects 
+                projectName="Send-Eth"
+                projectImage={sendeth}
+                projectSrc="https://github.com/locbgiang/sendEth"
+                projectDesc="This website allows users to connect with their Metamask wallet, then transfer ETH through the Ethereum network.  
+                Users then can view their past transactions dynamically on the site.
+                Building this website helped me understand how blockchain techology can be implemented with a website."
+                projectTechFrontEnd={["React", "Tailwind","Javascript"]}
+                projectTechBackEnd={["Javascript", "Hardhat", "Solidity"]}
+            />
+            <Projects 
+                projectName="Send-Eth"
+                projectImage={sendeth}
+                projectSrc="https://github.com/locbgiang/sendEth"
+                projectDesc="This website allows users to connect with their Metamask wallet, then transfer ETH through the Ethereum network.  
+                Users then can view their past transactions dynamically on the site.
+                Building this website helped me understand how blockchain techology can be implemented with a website."
+                projectTechFrontEnd={["React", "Tailwind","Javascript"]}
+                projectTechBackEnd={["Javascript", "Hardhat", "Solidity"]}
+            />
+            <Projects 
+                projectName="Send-Eth"
+                projectImage={sendeth}
+                projectSrc="https://github.com/locbgiang/sendEth"
+                projectDesc="This website allows users to connect with their Metamask wallet, then transfer ETH through the Ethereum network.  
+                Users then can view their past transactions dynamically on the site.
+                Building this website helped me understand how blockchain techology can be implemented with a website."
+                projectTechFrontEnd={["React", "Tailwind","Javascript"]}
+                projectTechBackEnd={["Javascript", "Hardhat", "Solidity"]}
+            />
         </BodySpace>
     )
 }

@@ -4,14 +4,14 @@ import { FiMail } from 'react-icons/fi';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 const HeaderSpaceFull = styled.div`
-    height: 1000px;
+    height: 900px;
 `;
 
 const InfoBar = styled.div`
     display: flex;
     align-items: center;
     width: 100%;
-    height: 30px;
+    height: 5%;
 `;
 
 const InfoName = styled.div`
