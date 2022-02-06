@@ -1,31 +1,62 @@
 import styled from 'styled-components';
 import React from 'react';
 import { FiMail } from 'react-icons/fi';
-const InfoBar = styled.div`
+const FooterSpace = styled.div`
+    width: full;
     display: flex;
+    justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 50px;
+    flex-direction: column;
+    padding: 4px;
 `;
 
-const InfoName = styled.div`
-    color: white;
-    font-size: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
+const ContactSpace = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 1rem;
 `;
 
-const InfoEmail = styled.div`
+const ContactText = styled.div`
     color: white;
-    font-size: 20px;
-    width: 20%;
-    padding-left: 5px;
+    text-size: small;
+    text-align: center;
+`;
+
+const Line = styled.div`
+    width: 90%;
+    height: 0.25px;
+    background-color: gray;
+    margin-top: 0.75rem;
+`;
+
+const End = styled.div`
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.75rem;
+`;
+
+const EndText = styled.div`
+    color: white;
 `;
 
 const Footer = () => {
     return (
-        <InfoBar>
-        </InfoBar>
+        <FooterSpace>
+            <ContactSpace>
+                <ContactText>EMAIL:</ContactText>
+                <ContactText>Locbgiang@gmail.com</ContactText>
+            </ContactSpace>
+            <Line />
+            <End>
+                <EndText>
+                    Loc Giang
+                </EndText>
+            </End>
+
+        </FooterSpace>
     )
 }
 
