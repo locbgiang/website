@@ -5,6 +5,7 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 const HeaderSpaceFull = styled.div`
     height: 1000px;
+    background-color:red;
 `;
 
 const InfoBar = styled.div`
