@@ -3,15 +3,15 @@ import styled from 'styled-components';
 
 const FullApp = styled.div`
   background-color: #121212;
-  height: auto;
-  width: auto;
+  height: max;
+  width: max;
 `;
 
 function App() {
   return (
     <FullApp>
       <Header />
-      <Body />
+        <Body />
       <Footer />
     </FullApp>
   )
