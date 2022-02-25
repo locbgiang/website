@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import sendeth from '../../images/sendeth.png';
+import cryptosite from '../../images/cryptosite.png';
 import React from 'react';
 import { FaGithub } from 'react-icons/fa';
 
@@ -142,7 +143,7 @@ const ProjectDescription = styled.div`
 `;
 
 const ProjectTechBox = styled.div`
-    height: 15%;
+    height: 20%;
     width: 100%;
 
     display:flex;
@@ -249,12 +250,22 @@ const Body = () => {
                     projectTechFrontEnd={["React", "Tailwind","Javascript"]}
                     projectTechBackEnd={["Javascript", "Hardhat", "Solidity"]}
                 />
+
             </ProjectSpace>
             <ProjectSpaceName>
                 Web2 Projects
             </ProjectSpaceName>
             <ProjectSpace>
-                
+                <Projects 
+                    projectSite="https://cryptosite.vercel.app/"
+                    projectName="CryptoSite"
+                    projectImage={cryptosite}
+                    projectSrc="https://github.com/locbgiang/cryptosite"
+                    projectDesc="This app tracks the prices of cryptocurrencies and crypto related news.  Designed using Ant-Design.  
+                    It used multiple API sources, and managed data with redux.  Building this app taught me Redux best practices on how to manage multiple sources of data from APIs"
+                    projectTechFrontEnd={["React", "Redux", "Ant-Design", "Javascript"]}
+                    projectTechBackEnd={["N/A"]}
+                />
             </ProjectSpace>
         </BodySpace>
     )
