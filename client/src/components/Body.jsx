@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import sendeth from '../../images/sendeth.png';
 import cryptosite from '../../images/cryptosite.png';
+import defistakeapp from '../../images/defistakeapp.png';
+
 import React from 'react';
 import { FaGithub } from 'react-icons/fa';
 
@@ -248,6 +250,16 @@ const Body = () => {
                     Users then can view their past transactions dynamically on the site.
                     Building this website helped me understand how blockchain techology can be implemented with a react application."
                     projectTechFrontEnd={["React", "Tailwind","Javascript"]}
+                    projectTechBackEnd={["Javascript", "Hardhat", "Solidity"]}
+                />
+                <Projects 
+                    projectSite="https://defi-stake-app.vercel.app"
+                    projectName="Defi-Stake-App"
+                    projectImage={defistakeapp}
+                    projectSrc="https://github.com/locbgiang/Defi-Staking-App"
+                    projectDesc="This simple app uses the standard solidity staking contract to distribute reward tokens to stakers.  
+                    Building this app helped me better understand how solidity and smart contracts work."
+                    projectTechFrontEnd={["React", "Styled-Component","Javascript", "Context"]}
                     projectTechBackEnd={["Javascript", "Hardhat", "Solidity"]}
                 />
 
