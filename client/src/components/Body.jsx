@@ -238,8 +238,24 @@ const Body = () => {
     return (
         <BodySpace>
             <ProjectSpaceName>
+                Web2 Projects
+            </ProjectSpaceName>
+            <ProjectSpace>
+                <Projects 
+                    projectSite="https://cryptosite.vercel.app/"
+                    projectName="CryptoSite"
+                    projectImage={cryptosite}
+                    projectSrc="https://github.com/locbgiang/cryptosite"
+                    projectDesc="This app tracks the prices of cryptocurrencies and crypto related news.  Designed using Ant-Design.  
+                    It used multiple API sources, and managed data with redux.  Building this app taught me Redux best practices on how to manage multiple sources of data from APIs"
+                    projectTechFrontEnd={["React", "Redux", "Ant-Design", "Javascript"]}
+                    projectTechBackEnd={["N/A"]}
+                />
+            </ProjectSpace>
+            <ProjectSpaceName>
                 Web3 Projects
             </ProjectSpaceName>
+            
             <ProjectSpace>
                 <Projects 
                     projectSite="https://send-eth-website.vercel.app/"
@@ -261,22 +277,6 @@ const Body = () => {
                     Building this app helped me better understand how solidity and smart contracts work."
                     projectTechFrontEnd={["React", "Styled-Component","Javascript", "Context"]}
                     projectTechBackEnd={["Javascript", "Hardhat", "Solidity"]}
-                />
-
-            </ProjectSpace>
-            <ProjectSpaceName>
-                Web2 Projects
-            </ProjectSpaceName>
-            <ProjectSpace>
-                <Projects 
-                    projectSite="https://cryptosite.vercel.app/"
-                    projectName="CryptoSite"
-                    projectImage={cryptosite}
-                    projectSrc="https://github.com/locbgiang/cryptosite"
-                    projectDesc="This app tracks the prices of cryptocurrencies and crypto related news.  Designed using Ant-Design.  
-                    It used multiple API sources, and managed data with redux.  Building this app taught me Redux best practices on how to manage multiple sources of data from APIs"
-                    projectTechFrontEnd={["React", "Redux", "Ant-Design", "Javascript"]}
-                    projectTechBackEnd={["N/A"]}
                 />
             </ProjectSpace>
         </BodySpace>
