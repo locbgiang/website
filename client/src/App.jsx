@@ -2,9 +2,9 @@ import {Header, Body, Footer} from './components'
 import styled from 'styled-components';
 
 const FullApp = styled.div`
-  background-color: #121212;
-  height: max;
-  width: max;
+  background-color: #0d0d0d;
+  min-height: 100vh;
+  width: 100%;
 `;
 
 function App() {
