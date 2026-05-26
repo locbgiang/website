@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import sendeth from '../../images/sendeth.png';
 import cryptosite from '../../images/cryptosite.png';
 import defistakeapp from '../../images/defistakeapp.png';
+import defilend from '../../images/defilend.png';
 
 import React from 'react';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
@@ -88,20 +89,6 @@ const BodySpace = styled.div`
 
 const ProjectSectionWrapper = styled.section`
     width: 100%;
-`;
-
-const ProjectSpaceName = styled.div`
-    height: 80px;
-    width: 80%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 32px;
-    font-weight: 700;
-    color: #6c8ebf;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    margin: 0 auto;
 `;
 
 const ProjectSpace = styled.div`
@@ -395,8 +382,18 @@ const Body = () => {
 
             {/* Projects */}
             <ProjectSectionWrapper id="projects">
-                <ProjectSpaceName>Web2 Projects</ProjectSpaceName>
+                <SectionTitle>My <span>Projects</span></SectionTitle>
+                <Divider />
                 <ProjectSpace>
+                    <Projects
+                        projectSite="https://defi-lend-ruby.vercel.app/"
+                        projectName="Defi-Lend"
+                        projectImage={defilend}
+                        projectSrc="https://github.com/locbgiang/Defi-Lend"
+                        projectDesc="A decentralized lending protocol where users can deposit collateral and borrow tokens against it using Solidity smart contracts."
+                        projectTechFrontEnd={["React", "JavaScript", "Ethers.js"]}
+                        projectTechBackEnd={["JavaScript", "Hardhat", "Solidity"]}
+                    />
                     <Projects
                         projectSite="https://cryptosite.vercel.app/"
                         projectName="CryptoSite"
@@ -406,10 +403,6 @@ const Body = () => {
                         projectTechFrontEnd={["React", "Redux", "Ant-Design", "JavaScript"]}
                         projectTechBackEnd={["N/A"]}
                     />
-                </ProjectSpace>
-
-                <ProjectSpaceName>Web3 Projects</ProjectSpaceName>
-                <ProjectSpace>
                     <Projects
                         projectSite="https://send-eth-website.vercel.app/"
                         projectName="Send-Eth"
