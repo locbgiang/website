@@ -106,7 +106,7 @@ const ProjectSpace = styled.div`
 `;
 
 const ProjectBox = styled(motion.div)`
-    height: 600px;
+    min-height: 600px;
     width: 300px;
     margin: 30px 30px;
     display: flex;
@@ -283,6 +283,8 @@ const Projects = ({ projectSite, projectName, projectImage, projectSrc, projectD
         window.open(projectSite, '_blank');
     };
 
+    const hasBackEnd = projectTechBackEnd && projectTechBackEnd.length > 0 && projectTechBackEnd[0] !== 'N/A';
+
     return (
         <ProjectBox
             variants={cardVariants}
@@ -323,12 +325,16 @@ const Projects = ({ projectSite, projectName, projectImage, projectSrc, projectD
                         <ProjectTech key={item}>{item}</ProjectTech>
                     ))}
                 </ProjectTechBox>
-                <ProjectTechStack>Back-End</ProjectTechStack>
-                <ProjectTechBox>
-                    {projectTechBackEnd.map((item) => (
-                        <ProjectTech key={item}>{item}</ProjectTech>
-                    ))}
-                </ProjectTechBox>
+                {hasBackEnd && (
+                    <>
+                        <ProjectTechStack>Back-End</ProjectTechStack>
+                        <ProjectTechBox>
+                            {projectTechBackEnd.map((item) => (
+                                <ProjectTech key={item}>{item}</ProjectTech>
+                            ))}
+                        </ProjectTechBox>
+                    </>
+                )}
             </ProjectBody>
         </ProjectBox>
     );
